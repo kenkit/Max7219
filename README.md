@@ -48,9 +48,9 @@ This will open **GTKWave** with the predefined `main_tb.gtkw` configuration.
 - **SPI Mode:** Mode 0 (Data stable before the rising edge of the clock).
 - **Update Logic:** Burst updates (13 registers updated sequentially) triggered once per second.
 
-### Simulation Analysis (`simulation.png`)
+### Simulation Analysis (`simulation.jpg`)
 
-![Simulation Waveforms](simulation.png)
+![Simulation Waveforms](images/simulation.jpg)
 
 The simulation shows:
 - **Heartbeat LED:** Toggling at the expected intervals.
