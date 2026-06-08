@@ -1,0 +1,25 @@
+name: FPGA Tests
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup OSS CAD Suite
+        uses: YosysHQ/setup-oss-cad-suite@v3
+        with:
+          suite: latest
+
+      - name: Install Python Dependencies
+        run: |
+          python3 -m pip install apio
+          
+      - name: Configure Apio
+        run: |
+          apio install system
+          
+      - name: Run Tests
+        run: apio test
